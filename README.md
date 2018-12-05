@@ -76,41 +76,12 @@ Just need to set the variable FillNonSensitiveBranch: in the tracker block to 1.
 in the output root file.
 
 
-================================
- Getting the digitization code:
---------------------------------
-
-Fist than all, you will need to modify the Settings.sh file by setting the right path to the MIMOSA_DIGITIZER code,
-the DIGI_DIR variable. This code will perform the charge transport and digitization of the simulated hits on the sensors.
-To get the trunk of this code just do,
-
->$ svn co https://sbgsvn.in2p3.fr/svn/CMOS/MIMOSA_DIGITIZER/trunk  MIMOSA_DIGITIZER
-
-go to this directory and compile by doing
-
->$ ./Compile.sh
-
-The system should responds with something like this,
-
-rm -f src/*~
-rm -f *~
-rm -f ./lib/*.o
-g++ -I./ -I./lib/ -g -Wall -fPIC -Wno-deprecated -pthread -m64 -I/home/aperez/root/include -c -I. -o ./lib/digit_b2.o src/digit_b2.cc
-
-You can check that the .o library has been created inside the lib file.
-
-You will then need to set the DIGI_DIR variable in the Settings.sh file to the actual path of the MIMOSA_DIGITIZER code.
-
-======================================
- Specifying te Gant4 Build localtion:
---------------------------------------
+                   Specifying te Gant4 Build localtion:
 
 The code also needs the location of the Geant4 builds. For this you will need to set the variable GEANT4_BUILD_DIR inside the 
 Settings.sh file, e.g. GEANT4_BUILD_DIR=/path/Geant4/geantX.YY.ZZ.pWW-build.
 
-=====================
- Compiling the code:
-----------------------
+                   Compiling the code:
     
 Once the DIGI_DIR and GEANT4_BUILD_DIR varibles are set inside the Settings.sh file, just execute it
 

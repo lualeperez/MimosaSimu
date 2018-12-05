@@ -2,8 +2,8 @@
 
 clear
 
-export DIGI_DIR="/home/aperez/TAF_repo/TAF_developments/Geant4Simu_Developments/trunk_TestBeam_Geant4Simu_test_30Jan2017/MIMOSA_DIGITIZER_test"
-export GEANT4_BUILD_DIR="/home/aperez/Geant4/geant4.10.01.p02-build"
+export DIGI_DIR="$PWD/MIMOSA_DIGITIZER"
+export GEANT4_BUILD_DIR="/path/Geant4/geant4.10.01.p02-build"
 
 echo
 echo
