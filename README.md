@@ -76,12 +76,12 @@ Just need to set the variable FillNonSensitiveBranch: in the tracker block to 1.
 in the output root file.
 
 
-                   Specifying te Gant4 Build localtion:
+                   SPECIFYING THE GEANT4 BUILD LOCATION:
 
 The code also needs the location of the Geant4 builds. For this you will need to set the variable GEANT4_BUILD_DIR inside the 
 Settings.sh file, e.g. GEANT4_BUILD_DIR=/path/Geant4/geantX.YY.ZZ.pWW-build.
 
-                   Compiling the code:
+                   COMPILING THE CODE:
     
 Once the DIGI_DIR and GEANT4_BUILD_DIR varibles are set inside the Settings.sh file, just execute it
 
